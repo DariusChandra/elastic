@@ -55,6 +55,10 @@ func NewSearchSource() *SearchSource {
 	}
 }
 
+func (s *SearchSource) GetQuery() Query{
+	return s.query
+}
+
 // Query sets the query to use with this search source.
 func (s *SearchSource) Query(query Query) *SearchSource {
 	s.query = query

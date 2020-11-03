@@ -63,6 +63,11 @@ func (s *SearchService) GetSource() interface{} {
 	return s.source
 }
 
+// Add getter SearchService searchsource (to print the raw request)
+func (s *SearchService) GetSearchSource() interface{} {
+	return s.searchSource
+}
+
 // Pretty tells Elasticsearch whether to return a formatted JSON response.
 func (s *SearchService) Pretty(pretty bool) *SearchService {
 	s.pretty = &pretty

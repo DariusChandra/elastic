@@ -62,6 +62,11 @@ func NewSearchService(client *Client) *SearchService {
 }
 
 // Pretty tells Elasticsearch whether to return a formatted JSON response.
+func (s *SearchService) GetSearchServiceSource() interface{} {
+	return s.source
+}
+
+// Pretty tells Elasticsearch whether to return a formatted JSON response.
 func (s *SearchService) Pretty(pretty bool) *SearchService {
 	s.pretty = &pretty
 	return s

@@ -64,7 +64,7 @@ func (s *SearchService) GetSource() interface{} {
 }
 
 // Add getter SearchService searchsource (to print the raw request)
-func (s *SearchService) GetSearchSource() interface{} {
+func (s *SearchService) GetSearchSource() *SearchSource {
 	return s.searchSource
 }
 
